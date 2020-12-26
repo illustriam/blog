@@ -10,3 +10,11 @@
                 data: {confirm: "Are You Sure?"} %></li>
 <li><%= link_to "Home", root_path %></li>
 </ul>
+
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+    <%= render @article.comments %>
+<%end%>
+
+<h2> Add a comment: </h2>
+    <%= render 'comments/form' %>
